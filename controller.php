@@ -1,21 +1,48 @@
 <style type="text/css">
 	body{
-		max-width: 1180px;
+		max-width: 640px;
+		max-height: 360px;
 	 	position: static;
-    	border: 3px solid #73AD21;
-		 margin: auto;
+    	border: 2px solid black;
+		margin: auto;
 	}
 	.buttonAContainer{
 		padding-bottom: 10px;
+		
+		float: right;
+
 	}
 	.buttonBContainer{
 		padding-bottom: 10px;
+		
+		float: right;
 	}
 	.buttonXContainer{
 		padding-bottom: 10px;
+		
+		float: right;
 	}
-	.buttonYContainer{
+	.buttonAYContainer{
 		padding-bottom: 10px;
+		
+		float: right;
+	}
+
+	.buttonA{
+		padding-top: 180%;
+		
+	}
+	.buttonB{
+		padding-top: 142%;
+		padding-right: 10%;
+		
+	}
+	.buttonX{
+		padding-top: 142%;
+		
+	}
+	.buttonY{
+		
 	}
 
 	.A:hover{
@@ -40,26 +67,38 @@
 		<body>
 			<div class="controller">
 				<div class="controllerContainer">
-				<!-- button A -->
-					<div class="buttonAContainer"></div>
-						<div class="buttonA"><img class="A" id="A" height="75px" width="75px" src="images/Xbox-controller-a-button"></div>
 				<!-- button B -->
-					<div class="buttonBContainer"></div>
-						<div class="buttonB"><img class="B" height="75px" width="75px" src="images/Xbox-controller-b-button"></div>
-				<!-- button X -->
-					<div class="buttonXContainer"></div>
-						<div class="buttonX"><img class="X" height="75px" width="75px" src="images/Xbox-controller-x-button"></div>
+					<div class="buttonBContainer">
+						<div class="buttonB"><img class="B" id="B" height="30px" width="30px" src="images/Xbox-controller-b-button"></div>
+					</div>
 				<!-- button Y -->
-					<div class="buttonYContainer"></div>
-						<div class="buttonY"><img class="Y" height="75px" width="75px" src="images/Xbox-controller-y-button"></div>
+					<div class="buttonAYContainer">
+						<div class="buttonY"><img class="Y" id="Y" height="30px" width="30px" src="images/Xbox-controller-y-button"></div>	
+				<!-- button A -->
+						<div class="buttonA"><img class="A" id="A" height="30px" width="30px" src="images/Xbox-controller-a-button"></div>
+					</div>
+				<!-- button X -->
+					<div class="buttonXContainer">
+						<div class="buttonX"><img class="X" id="X" height="30px" width="30px" src="images/Xbox-controller-x-button"></div>
+					</div>
+
 				</div>			
 			</div>
 		</body>
 	</html>
 	<script type="text/javascript">
 		$( document ).ready(function() {
-    		$("#A").delegate("img", "click", function(){
-    			console.log('A');
-    		)};
+    		$("#A").on("click", function(){
+    			console.log('A')
+    		});
+    		$("#B").on("click", function(){
+    			console.log('B')
+    		});
+    		$("#X").on("click", function(){
+    			console.log('X')
+    		});
+    		$("#Y").on("click", function(){
+    			console.log('Y')
+    		});
 		});
 	</script>
